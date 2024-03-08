@@ -15,6 +15,7 @@
   "bugs": {
     "url": "https://github.com/replayableio/lgtm/issues"
   },
+  "start": "node server.js",
   "homepage": "https://github.com/replayableio/lgtm#readme",
   "dependencies": {
     "@playwright/test": "^1.42.1",
