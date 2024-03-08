@@ -2,7 +2,8 @@
 
 # Validate Playwright Tests without Flaky Selectors
 
-Modern websites are dynamic, so static selectors can be challenging to maintain. This causes tests to break with code changes. In addition, some things like `img` and `canvas` content are impossible to validate with selectors alone. GoodLooks.ai lets you validate visual changes with natural language prompts. 
+Modern websites are dynamic, so static selectors can be challenging to maintain. This causes tests to break with code changes. 
+Some things like `img` and `canvas` content are impossible to validate with selectors alone. GoodLooks.ai lets you validate visual changes with natural language prompts. 
 
 ## Demo
 
