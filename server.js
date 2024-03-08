@@ -10,7 +10,7 @@ app.use(express.json({ limit: "50mb" }));
 
 const port = process.env.PORT || 3005;
 
-app.post("/v1/lgtm", async (req, res) => {
+app.post("/v1/goodlooks", async (req, res) => {
   console.log("request made");
 
   console.log("assertion", req.body.assertion);
