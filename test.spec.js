@@ -28,3 +28,25 @@ test("get started link", async ({ page }) => {
 
   await expect(page).lgtm("shows the text 'introduction'");
 });
+
+test("github homepage", async ({ page }) => {
+  await page.goto("https://github.com/");
+
+  await expect(page).lgtm("6 brand logos show up");
+});
+
+test("ycombinator", async ({ page }) => {
+  await page.goto("https://news.ycombinator.com");
+
+  await expect(page).lgtm("the header is blue");
+  await expect(page).lgtm("the header is orange");
+  await expect(page).lgtm("the header is not blue");
+  await expect(page).lgtm("the header is blue");
+});
+
+test("nytimes", async ({ page }) => {
+  await page.goto("https://www.nytimes.com/");
+
+  await expect(page).lgtm("there is an ad on the homepage");
+  await expect(page).lgtm("there is someting political on the homepage");
+});
