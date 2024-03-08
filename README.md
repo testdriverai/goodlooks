@@ -8,7 +8,7 @@ Check out our other products: [TestDriver.ai](https://testdriver.ai/?ref=goodloo
 
 ## Quickstart
 
-Install via NPM and [Get an API KEY](https://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~pricing).
+Install via NPM and [create an API KEY](https://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~pricing).
 
 ```
 npm install goodlooks
