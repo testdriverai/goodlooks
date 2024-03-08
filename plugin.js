@@ -27,8 +27,9 @@ module.exports = {
 
     let result = await fetch(url, options);
 
+    let json;
     try {
-      let json = await result.json();
+      json = await result.json();
     } catch (e) {
       console.log(result);
       throw "API Error. Please verify your API key and account https://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~pricinghttps://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~pricing.";
