@@ -245,9 +245,9 @@ test("ycombinator", async ({ page }) => {
 </tr>
 </table>
 
-## Opinionated Image Contents
+## Qualitative Image Contents
 
-Ensure a diverse representation of people appears on the page. Of course, the judgement of this is left up to AI.
+Ensure a diverse representation of people appears on the page. Of course, this judgement is left up to AI.
 
 <table>
 <tr>
