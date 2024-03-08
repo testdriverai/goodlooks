@@ -13,8 +13,6 @@ module.exports = {
     // const url = "http://localhost:3005/v1/lgtm";
     const url = "https://lgtm-main-80a621c.d2.zuplo.dev/v1/lgtm";
 
-    console.log(apiKey);
-
     const options = {
       method: "POST",
       headers: {
