@@ -25,7 +25,7 @@ Use in Playwright tests!
 ```js
 const { test, expect, devices } = require("@playwright/test");
 const goodlooks = require("goodlooks");
-goodlooks.configure("YOUR_API_KEY");
+goodlooks.configure("zpka_3225d687355348e6bacfa9933028b158_7f9f9486");
 expect.extend(goodlooks);
 ```
 
@@ -52,7 +52,7 @@ Validate that a cookie banner shows up.
 const { test, expect } = require("@playwright/test");
 
 const goodlooks = require("goodlooks");
-goodlooks.configure("YOUR_API_KEY");
+goodlooks.configure("zpka_3225d687355348e6bacfa9933028b158_7f9f9486");
 
 expect.extend(goodlooks);
 
@@ -95,7 +95,7 @@ Ensure a page is rendering mobile view properly.
 const { test, expect, devices } = require("@playwright/test");
 
 const goodlooks = require("goodlooks");
-goodlooks.configure("YOUR_API_KEY");
+goodlooks.configure("zpka_3225d687355348e6bacfa9933028b158_7f9f9486");
 
 expect.extend(goodlooks);
 
@@ -141,7 +141,7 @@ Validate that the video player is not playing.
 const { test, expect } = require("@playwright/test");
 
 const goodlooks = require("goodlooks");
-goodlooks.configure("YOUR_API_KEY");
+goodlooks.configure("zpka_3225d687355348e6bacfa9933028b158_7f9f9486");
 
 expect.extend(goodlooks);
 
@@ -184,7 +184,7 @@ Ensure a page renders correct image contents via `img` or `canvas`.
 const { test, expect, devices } = require("@playwright/test");
 
 const goodlooks = require("goodlooks");
-goodlooks.configure("YOUR_API_KEY");
+goodlooks.configure("zpka_3225d687355348e6bacfa9933028b158_7f9f9486");
 
 expect.extend(goodlooks);
 
@@ -229,7 +229,7 @@ Ensure a page renders correct image contents via `img` or `canvas`.
 const { test, expect, devices } = require("@playwright/test");
 
 const goodlooks = require("goodlooks");
-goodlooks.configure("YOUR_API_KEY");
+goodlooks.configure("zpka_3225d687355348e6bacfa9933028b158_7f9f9486");
 
 expect.extend(goodlooks);
 
@@ -271,7 +271,7 @@ Ensure a diverse representation of people appears on the page. Of course, this j
 ```js
 const { test, expect } = require("@playwright/test");
 const goodlooks = require("goodlooks");
-goodlooks.configure("YOUR_API_KEY");
+goodlooks.configure("zpka_3225d687355348e6bacfa9933028b158_7f9f9486");
 
 test("diversity", async ({ page }) => {
   await page.goto("https://diversityequityinclusion.com/about/");
