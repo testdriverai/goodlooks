@@ -1,6 +1,6 @@
 {
   "name": "goodlooks",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Visually Validate Playwright Tests Without Flaky Selectors",
   "main": "test.js",
   "repository": {
