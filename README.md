@@ -14,12 +14,6 @@ Install via NPM.
 npm install goodlooks
 ```
 
-You can use this demo key to get started (but note that it gets rotated weekly). [Create your own API KEY](https://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~pricing).
-
-```
-zpka_3225d687355348e6bacfa9933028b158_7f9f9486
-```
-
 Use in Playwright tests!
 
 ```js
@@ -28,6 +22,8 @@ const goodlooks = require("goodlooks");
 goodlooks.configure("zpka_3225d687355348e6bacfa9933028b158_7f9f9486");
 expect.extend(goodlooks);
 ```
+
+Note that these examples use a demo key that gets rotated weekly; you'll want to [create your own API KEY](https://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~pricing).
 
 # Examples
 
