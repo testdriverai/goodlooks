@@ -7,3 +7,6 @@ Some things like `img` and `canvas` content are impossible to validate with sele
 
 ## Demo
 
+- mobile responsive
+- design, spacing
+- images
