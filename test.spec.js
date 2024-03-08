@@ -1,6 +1,7 @@
 const { test, expect } = require("@playwright/test");
 
-const goodlooks = require("./plugin.js")('zpka_05acaa405814447ba022449aa073fef5_78748307');
+const goodlooks = require("./plugin.js");
+goodlooks.configure("zpka_05acaa405814447ba022449aa073fef5_78748307");
 
 expect.extend(goodlooks);
 
