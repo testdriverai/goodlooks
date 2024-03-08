@@ -14,7 +14,11 @@ Install via NPM.
 npm install goodlooks
 ```
 
-You can use this demo key to get started fast `zpka_3225d687355348e6bacfa9933028b158_7f9f9486` (note this gets rotated weekly). [Create your own API KEY](https://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~pricing).
+You can use this demo key to get started (but note that it gets rotated weekly). [Create your own API KEY](https://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~pricing).
+
+```
+zpka_3225d687355348e6bacfa9933028b158_7f9f9486
+```
 
 Use in Playwright tests!
 
