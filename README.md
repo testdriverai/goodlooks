@@ -115,49 +115,6 @@ test("is mobile responsive", async ({ page }) => {
 </tr>
 </table>
 
-## Image Contents
-
-Ensure a page renders correct image contents via `img` or `canvas`.
-
-<table>
-<tr>
-<td><strong>Input</strong> </td> <td><strong>Code</strong></td>
-</tr>
-<tr>
-<td> 
-  
-![Eloquent Javascript](https://github.com/dashcamio/goodlooks/assets/318295/359e6df7-80ac-4cfe-afec-c25d426c57bb)
-
-
-</td>
-<td>
-    
-```js
-const { test, expect, devices } = require("@playwright/test");
-
-const goodlooks = require("goodlooks");
-goodlooks.configure("YOUR_API_KEY");
-
-expect.extend(goodlooks);
-
-test("correct image appears", async ({ page }) => {
-  await page.goto("https://eloquentjavascript.net/");
-  await expect(page).goodlooks("there is bird on this page");
-});
-
-```
-
-</td>
-</tr>
-<tr>
-  <td colspan=2><strong>Result</strong></td>
-</tr>
-<tr>
-  <td colspan=2>
-<strong>✅ PASS.</strong> There is an illustration of a bird on the left side of the page on the cover of a book titled "Eloquent JavaScript, Fourth Edition."  </td>
-</tr>
-</table>
-
 ## Application State
 
 Validate that the video player is not playing.
@@ -245,7 +202,50 @@ test("ycombinator", async ({ page }) => {
 </tr>
 </table>
 
-## Qualitative Image Contents
+## Image Contents
+
+Ensure a page renders correct image contents via `img` or `canvas`.
+
+<table>
+<tr>
+<td><strong>Input</strong> </td> <td><strong>Code</strong></td>
+</tr>
+<tr>
+<td> 
+  
+![Eloquent Javascript](https://github.com/dashcamio/goodlooks/assets/318295/359e6df7-80ac-4cfe-afec-c25d426c57bb)
+
+
+</td>
+<td>
+    
+```js
+const { test, expect, devices } = require("@playwright/test");
+
+const goodlooks = require("goodlooks");
+goodlooks.configure("YOUR_API_KEY");
+
+expect.extend(goodlooks);
+
+test("correct image appears", async ({ page }) => {
+  await page.goto("https://eloquentjavascript.net/");
+  await expect(page).goodlooks("there is bird on this page");
+});
+
+```
+
+</td>
+</tr>
+<tr>
+  <td colspan=2><strong>Result</strong></td>
+</tr>
+<tr>
+  <td colspan=2>
+<strong>✅ PASS.</strong> There is an illustration of a bird on the left side of the page on the cover of a book titled "Eloquent JavaScript, Fourth Edition."  </td>
+</tr>
+</table>
+
+## Opinionated Image Contents
 
 Ensure a diverse representation of people appears on the page. Of course, this judgement is left up to AI.
 
