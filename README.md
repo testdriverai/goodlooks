@@ -8,11 +8,13 @@ Check out our other products: [TestDriver.ai](https://testdriver.ai/?ref=goodloo
 
 ## Quickstart
 
-Install via NPM and [create an API KEY](https://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~pricing). You can [manage your subscription here](https://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~subscription).
+Install via NPM.
 
 ```
 npm install goodlooks
 ```
+
+You can use this demo key to get started fast `zpka_3225d687355348e6bacfa9933028b158_7f9f9486` (note this gets rotated weekly). [Create your own API KEY](https://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~pricing).
 
 Use in Playwright tests!
 
@@ -308,7 +310,12 @@ Only the visible part of the page is checked, not the full page. You must scroll
 
 The AI is great at identifying what is in an image, but it's not great at identifying where those things are in relation to other things. For example, don't ask GoodLooks to count items to validate their position on the screen.
 
+## How do I manage my subscription
+
+You can [manage your subscription here](https://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~subscription).
+
 # Other Projects
 
 - [TestDriver.ai](https://testdriver.ai?ref=goodlooks) - AI QA Agent for GitHub
 - [Dashcam.io](https://dashcam.io?ref=goodlooks) - Instant Replay for Software Testing
+
