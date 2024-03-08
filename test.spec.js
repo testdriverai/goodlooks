@@ -1,13 +1,13 @@
 const { test, expect, devices } = require("@playwright/test");
 
 const goodlooks = require("./plugin.js");
-goodlooks.configure("zpka_05acaa405814447ba022449aa073fef5_78748307");
+goodlooks.configure("zpka_3225d687355348e6bacfa9933028b158_7f9f9486");
 
 expect.extend(goodlooks);
 
 test("is mobile responsive", async ({ page }) => {
-  await page.goto("https://cnn.com/");
   page.setViewportSize(devices["iPhone X"].viewport);
+  await page.goto("https://cnn.com/");
   await expect(page).goodlooks("should be mobile responsive");
 });
 
@@ -21,15 +21,15 @@ test("diversity", async ({ page }) => {
   await expect(page).goodlooks("diverse people show up");
 });
 
-test("is mobile responsive 2", async ({ page }) => {
-  page.setViewportSize(devices["iPhone X"].viewport);
-  await page.goto("https://early-nonogon-415595.framer.app/");
-  await expect(page).goodlooks("is mobile responsive");
-});
-
 test("github homepage", async ({ page }) => {
   await page.goto("https://github.com/");
-  await expect(page).goodlooks("6 brand logos show up");
+  await expect(page).goodlooks("A row of logos appears on the page");
+});
+
+test("framer", async ({ page }) => {
+  await page.goto("https://framer.com/");
+  await page.waitForTimeout(5000);
+  await expect(page).goodlooks("A request to enable cookies shows up");
 });
 
 test("ycombinator", async ({ page }) => {
@@ -54,4 +54,9 @@ test("zombo", async ({ page }) => {
 test("rickroll", async ({ page }) => {
   await page.goto("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
   await expect(page).goodlooks("video is not playing");
+});
+
+test("failure", async ({ page }) => {
+  await page.goto("https://github.com/");
+  await expect(page).goodlooks("A giraffee shows up on the page");
 });

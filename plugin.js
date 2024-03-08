@@ -10,8 +10,8 @@ module.exports = {
   goodlooks: async function (page, assertion) {
     let screenshot = await page.screenshot({ encoding: "base64" });
 
-    const url = "http://localhost:3005/v1/lgtm";
-    // const url = "https://lgtm-main-80a621c.d2.zuplo.dev/v1/lgtm";
+    // const url = "http://localhost:3005/v1/lgtm";
+    const url = "https://lgtm-main-80a621c.d2.zuplo.dev/v1/lgtm";
 
     console.log(apiKey);
 
@@ -28,7 +28,13 @@ module.exports = {
     };
 
     let result = await fetch(url, options);
-    let json = await result.json();
+
+    try {
+      let json = await result.json();
+    } catch (e) {
+      console.log(result);
+      throw "API Error. Please verify your API key and account https://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~pricinghttps://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~pricing.";
+    }
 
     if (json.indexOf("PASS") > -1) {
       let message = `GoodLooks.ai ${json}`;
