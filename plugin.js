@@ -1,44 +1,25 @@
-const OpenAI = require("openai");
-const uuid = require("uuid");
 import bufferToDataUrl from "buffer-to-data-url";
-
-const openai = new OpenAI({
-  apiKey: process.env["OPENAI_API_KEY"], // This is the default and can be omitted
-});
+const http = require("https");
 
 module.exports = {
-  lgtm: async function (page, text) {
+  lgtm: async function (page, assertion) {
     let screenshot = await page.screenshot({ encoding: "base64" });
 
-    let prompt = `You are part of a test suite that will visually validate some assertion. The test suite is running on a website and has taken a screenshot of the page which will be supplid to you."`;
+    const url = "http://localhost:3005/v1/lgtm"; // "https://lgtm-main-80a621c.d2.zuplo.dev/v1/lgtm";
+    const options = {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer YOUR_KEY_HERE",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        screenshot: bufferToDataUrl("image/png", screenshot),
+        assertion,
+      }),
+    };
 
-    const response = await openai.chat.completions.create({
-      model: "gpt-4-vision-preview",
-      max_tokens: 500,
-      messages: [
-        {
-          role: "system",
-          content: `You are part of a test framework, responsible for validating screenshots taken of web pages. You must visually validate that the supplied condition is true. Provide an answer, you must include PASS or FAIL and an explanation of why you chose your response. Do not reference the image, reference the page instead.>"}`,
-        },
-        {
-          role: "user",
-          content: [
-            { type: "text", text },
-            {
-              type: "image_url",
-              image_url: {
-                url: bufferToDataUrl("image/png", screenshot),
-              },
-            },
-          ],
-        },
-      ],
-    });
-
-    let json = response.choices[0].message.content;
-
-    console.log(json);
-    console.log(json.reason);
+    let result = await fetch(url, options);
+    let json = await result.json();
 
     if (json.indexOf("PASS") > -1) {
       return {
