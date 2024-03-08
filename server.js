@@ -13,7 +13,7 @@ const port = process.env.PORT || 3005;
 app.post("/v1/lgtm", async (req, res) => {
   console.log("request made");
 
-  console.log("assertino", req.body.assertion);
+  console.log("assertion", req.body.assertion);
 
   const response = await openai.chat.completions.create({
     model: "gpt-4-vision-preview",
