@@ -2,14 +2,15 @@ const { test, expect } = require("@playwright/test");
 
 const lgtm = require("./plugin.js");
 
+expect.extend(lgtm);
+
 test("has title", async ({ page }) => {
   await page.goto("https://playwright.dev/");
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
 
-  // for some reason it's race conditoin
-  await lgtm(page, "shows the playwright logo");
+  await expect(page).lgtm("shows the playwright logo");
 });
 
 test("get started link", async ({ page }) => {
@@ -24,5 +25,6 @@ test("get started link", async ({ page }) => {
   ).toBeVisible();
 
   // for some rason this does not wait for page to be loaded
-  await lgtm(page, "show this discord logo");
+
+  await expect(page).lgtm("shows the text 'introduction'");
 });
