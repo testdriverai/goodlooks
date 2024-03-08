@@ -1,13 +1,30 @@
-const { test, expect } = require("@playwright/test");
+const { test, expect, devices } = require("@playwright/test");
 
 const goodlooks = require("./plugin.js");
 goodlooks.configure("zpka_05acaa405814447ba022449aa073fef5_78748307");
 
 expect.extend(goodlooks);
 
-test("has title", async ({ page }) => {
-  await page.goto("https://playwright.dev/");
-  await expect(page).goodlooks("shows the playwright logo");
+test("is mobile responsive", async ({ page }) => {
+  await page.goto("https://cnn.com/");
+  page.setViewportSize(devices["iPhone X"].viewport);
+  await expect(page).goodlooks("should be mobile responsive");
+});
+
+test("correct image appears", async ({ page }) => {
+  await page.goto("https://eloquentjavascript.net/");
+  await expect(page).goodlooks("there is bird on this page");
+});
+
+test("diversity", async ({ page }) => {
+  await page.goto("https://diversityequityinclusion.com/about/");
+  await expect(page).goodlooks("diverse people show up");
+});
+
+test("is mobile responsive 2", async ({ page }) => {
+  page.setViewportSize(devices["iPhone X"].viewport);
+  await page.goto("https://early-nonogon-415595.framer.app/");
+  await expect(page).goodlooks("is mobile responsive");
 });
 
 test("github homepage", async ({ page }) => {
@@ -27,11 +44,6 @@ test("nytimes", async ({ page }) => {
 
   await expect(page).goodlooks("there is an ad on the homepage");
   await expect(page).goodlooks("there is someting political on the homepage");
-});
-
-test("eloquent", async ({ page }) => {
-  await page.goto("https://eloquentjavascript.net/");
-  await expect(page).goodlooks("there is bird on this page");
 });
 
 test("zombo", async ({ page }) => {

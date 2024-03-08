@@ -31,18 +31,21 @@ module.exports = {
     let json = await result.json();
 
     if (json.indexOf("PASS") > -1) {
+      let message = `GoodLooks.ai ${json}`;
+      console.log(message);
+
       return {
         pass: true,
-        message: () => `goodlooks.sh ${json}`,
-        name: "goodlooks",
+        message: () => `GoodLooks.ai ${json}`,
+        name: "GoodLooks.ai",
         expected: true,
         actual: true,
       };
     } else {
       return {
         pass: false,
-        message: () => `goodlooks.sh ${json}`,
-        name: "goodlooks",
+        message: () => `GoodLooks.ai ${json}`,
+        name: "GoodLooks.ai",
         expected: true,
         actual: false,
       };
