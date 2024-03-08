@@ -5,11 +5,12 @@ module.exports = {
   lgtm: async function (page, assertion) {
     let screenshot = await page.screenshot({ encoding: "base64" });
 
-    const url = "http://localhost:3005/v1/lgtm"; // "https://lgtm-main-80a621c.d2.zuplo.dev/v1/lgtm";
+    // const url = "http://localhost:3005/v1/lgtm";
+    const url = "https://lgtm-main-80a621c.d2.zuplo.dev/v1/lgtm";
     const options = {
       method: "POST",
       headers: {
-        Authorization: "Bearer YOUR_KEY_HERE",
+        Authorization: "Bearer zpka_05acaa405814447ba022449aa073fef5_78748307",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
