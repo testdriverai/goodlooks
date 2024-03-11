@@ -5,15 +5,15 @@
   "main": "test.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/replayableio/goodlooks.git"
+    "url": "git+https://github.com/dashcamio/goodlooks.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/replayableio/goodlooks/issues"
+    "url": "https://github.com/dashcamio/goodlooks/issues"
   },
   "start": "node server.js",
-  "homepage": "https://github.com/replayableio/goodlooks#readme",
+  "homepage": "https://github.com/dashcamio/goodlooks#readme",
   "dependencies": {
     "@playwright/test": "^1.42.1",
     "buffer-to-data-url": "^1.0.0",
