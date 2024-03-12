@@ -8,26 +8,15 @@ Check out our other products: [TestDriver.ai](https://testdriver.ai/?ref=goodloo
 
 ## Quickstart
 
-Install via NPM.
-
-```
-npm install goodlooks
-```
-
-Use in Playwright tests!
-
-```js
-const { test, expect, devices } = require("@playwright/test");
-const goodlooks = require("goodlooks");
-goodlooks.configure("zpka_c0d0539ada014283bc974f0fd55835ea_2b745cbf");
-expect.extend(goodlooks);
-```
+1. Clone this repo
+2. `npm install`
+3. `npx playwright test`
 
 Note that these examples use a demo key that gets rotated weekly; you'll want to [create your own API KEY](https://lgtm-main-80a621c.d2.zuplo.dev/docs/routes/~pricing).
 
 # Examples
 
-## Element Visiblity
+## Element Visibility
 
 Validate that a cookie banner shows up.
 
@@ -286,6 +275,23 @@ test("diversity", async ({ page }) => {
   </td>
 </tr>
 </table>
+
+# Setup
+
+Install via NPM.
+
+```
+npm install goodlooks
+```
+
+Use in Playwright tests!
+
+```js
+const { test, expect, devices } = require("@playwright/test");
+const goodlooks = require("goodlooks");
+goodlooks.configure("zpka_c0d0539ada014283bc974f0fd55835ea_2b745cbf");
+expect.extend(goodlooks);
+```
 
 # Debugging
 
