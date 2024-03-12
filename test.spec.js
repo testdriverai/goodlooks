@@ -1,7 +1,7 @@
 const { test, expect, devices } = require("@playwright/test");
 
 const goodlooks = require("./plugin.js");
-goodlooks.configure("zpka_aa953211dd424cee8c649311da1b2584_1c5f0970");
+goodlooks.configure("zpka_c0d0539ada014283bc974f0fd55835ea_2b745cbf");
 
 expect.extend(goodlooks);
 
