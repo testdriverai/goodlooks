@@ -8,7 +8,7 @@ Check out our other products: [TestDriver.ai](https://testdriver.ai/?ref=goodloo
 
 ## Quickstart
 
-1. Clone this repo
+1. `git clone git@github.com:dashcamio/goodlooks.git`
 2. `npm install`
 3. `npx playwright test`
 
