@@ -1,5 +1,7 @@
 ![GoodLooks Logo](https://github.com/dashcamio/goodlooks/assets/318295/feb1d637-f1b0-48a2-8fd7-d4b855ad93bd)
 
+Made by [TestDriver.ai](https://testdriver.ai) - Automate and scale QA with agentic users
+
 # Visually Validate Playwright Tests Without Flaky Selectors
 
 Static selectors break with code changes and can't prove that a site "looks good". Is that button really missing or was the `id` changed? Is the site responsive on mobile? Is the correct image showing? These kinds of tests are impossible to validate with selectors alone and take a lot of time to test manually. GoodLooks.ai lets you visually validate your web pages with natural language prompts instead of selectors.
